@@ -27,7 +27,7 @@ public class Program {
     	cfg.height = 200;
     	cfg.width = 200;
     	cfg.gameBoardDefinition = "[[1,1]";
-    	cfg.maxStepCount = 10;
+    	cfg.maxStepCount = 100;
     
     	runner.run(cfg);
     }
@@ -42,7 +42,7 @@ public class Program {
     	cfg.height = 200;
     	cfg.width = 200;
     	cfg.gameBoardDefinition = "[[5, 5], [6, 5], [7, 5], [5, 6], [6, 6], [7, 6]]";
-    	cfg.maxStepCount = 10;
+    	cfg.maxStepCount = 100;
     
     	runner.run(cfg);
     }
