@@ -13,15 +13,15 @@ public class Program {
     public static void main ( String [] arguments ) throws Exception
     {
       
-    	RunAppExample3();
+    	runAppExample2();
     	
     }
     
-    private static void RunAppExample1() throws Exception
+    private static void runAppExample1() throws Exception
     {
     	// as per requirement document example 1
     	var di = new DiResolver();
-    	var runner = di.Resolve(IGameRunnerService.class);
+    	var runner = di.resolve(IGameRunnerService.class);
     	
     	var cfg = new GameConfig();
     	cfg.height = 200;
@@ -32,11 +32,11 @@ public class Program {
     	runner.run(cfg);
     }
     
-    private static void RunAppExample2() throws Exception
+    private static void runAppExample2() throws Exception
     {
     	// as per requirement document example 2
     	var di = new DiResolver();
-    	var runner = di.Resolve(IGameRunnerService.class);
+    	var runner = di.resolve(IGameRunnerService.class);
     	
     	var cfg = new GameConfig();
     	cfg.height = 200;
@@ -47,11 +47,11 @@ public class Program {
     	runner.run(cfg);
     }
     
-    private static void RunAppExample3() throws Exception
+    private static void runAppExample3() throws Exception
     {
     	// this one moves, as per https://playgameoflife.com/
     	var di = new DiResolver();
-    	var runner = di.Resolve(IGameRunnerService.class);
+    	var runner = di.resolve(IGameRunnerService.class);
     	
     	var cfg = new GameConfig();
     	cfg.height = 200;
@@ -62,12 +62,12 @@ public class Program {
     	runner.run(cfg);
     }
     
-    private static void Test1() throws Exception
+    private static void test1() throws Exception
     {
     	var di = new DiResolver();
         	
-    	var creatorSvc = di.Resolve(IGameBoardCreatorService.class);    	
-    	var outputSvc = di.Resolve(IGameBoardOutputService.class);
+    	var creatorSvc = di.resolve(IGameBoardCreatorService.class);    	
+    	var outputSvc = di.resolve(IGameBoardOutputService.class);
     	
     	var gb = creatorSvc.create(100, 100);
     	gb.matrix[1][1].isAlive = true;
@@ -78,13 +78,13 @@ public class Program {
     	
     }
     
-    private static void Test2() throws Exception
+    private static void test2() throws Exception
     {
     	    
     	var di = new DiResolver();
     	
-    	var inputSvc = di.Resolve(IGameBoardInputService.class);    	
-    	var outputSvc = di.Resolve(IGameBoardOutputService.class);
+    	var inputSvc = di.resolve(IGameBoardInputService.class);    	
+    	var outputSvc = di.resolve(IGameBoardOutputService.class);
     	
     	var gb2 = inputSvc.convertFromString("[[1,20],[2,14],[3,34]]", 100, 100);
     	

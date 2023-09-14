@@ -12,7 +12,7 @@ public class DiResolver {
 		this.injector = Guice.createInjector(new BasicModule[]{ new BasicModule()}); 
 	}
 	
-	public <T> T Resolve(Class<T> cls)
+	public <T> T resolve(Class<T> cls)
 	{				
 		var instance = this.injector.getInstance(cls);
 		
